@@ -1,0 +1,266 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.UserPage {
+  width: 95%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 50px 0px;
+}
+.UserPage h2 {
+  font-size: 18px;
+  font-family: "jost", sans-serif;
+  padding-bottom: 30px;
+  padding: 15px 20px;
+  color: #fff;
+  font-weight: 400;
+  border-radius: 5px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.userItems {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  justify-content: center;
+  align-items: inherit;
+  padding-top: 30px;
+}
+.userItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafafa;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #00000010;
+  position: relative;
+}
+.userItem h2 {
+  font-family: "Jost", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #300048;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  line-break: anywhere;
+}
+.userItem h3 {
+  font-family: "Jost", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #300048;
+  display: inline-block;
+  margin: 0px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  line-break: anywhere;
+}
+.userItem .buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.buttons button {
+  font-size: 16px;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  border: 1px solid #300048;
+  width: 90%;
+  height: 40px;
+  background-color: #300048;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.buttons button:hover {
+  background-color: #fff;
+  color: #300048;
+  width: 100%;
+  border: 1px solid #300048;
+}
+.headerArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerArea h1 {
+  font-size: 30px;
+  font-family: "jost", sans-serif;
+  font-weight: 600;
+  color: #300048;
+  text-transform: uppercase;
+}
+.headerArea select {
+  width: 20%;
+}
+.headerArea input {
+  padding: 10px;
+  font-size: 16px;
+  font-family: "jost", sans-serif;
+  font-weight: 400;
+  color: #300048;
+  border: none;
+  background-color: #fafafa;
+  border: 1px solid #00000010;
+  width: 20%;
+}
+.headerArea button {
+  font-size: 16px;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  border: 1px solid #300048;
+  padding: 10px 50px;
+  background-color: #300048;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.headerArea button:hover {
+  background-color: #fff;
+  color: #300048;
+  border: 1px solid #300048;
+  padding: 10px 60px;
+}
+.userForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.userForm span {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+}
+.userForm label {
+  font-size: 18px;
+  font-family: "jost", sans-serif;
+  font-weight: 500;
+}
+.userForm input {
+  width: 100%;
+  border: 1px solid #00000010;
+  padding: 10px;
+  background-color: #fff;
+  font-size: 18px;
+  font-family: "jost", sans-serif;
+  font-weight: 500;
+  border-radius: 5px;
+}
+.userForm button {
+  width: 100%;
+  height: 60px;
+  border-radius: 5px;
+  border: 1px solid #300048;
+  background-color: #300048;
+  font-size: 18px;
+  font-family: "jost", sans-serif;
+  font-weight: 400;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+.userForm button:hover {
+  background-color: #fff;
+  color: #300048;
+  width: 95%;
+}
+.createForm {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #0000001e;
+}
+.editForm {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #0000001e;
+}
+.createFormContainer {
+  background-color: #fafafa;
+  padding: 50px;
+  width: 500px;
+  border: 1px solid #00000010;
+  border-radius: 10px;
+  position: relative;
+}
+.createFormContainer h2 {
+  font-size: 30px;
+  text-align: center;
+  font-family: "jost", sans-serif;
+  padding-bottom: 30px;
+  color: #300048;
+}
+.createFormContainer p {
+  font-size: 14px;
+  font-family: "jost", sans-serif;
+  padding-bottom: 30px;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+.createFormContainer svg {
+  position: absolute;
+  top: -3%;
+  right: -3%;
+  font-size: 40px;
+  cursor: pointer;
+  color: #300048;
+}
+/* Media Query */
+@media screen and (max-width: 900px) {
+  .userItems {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .headerArea button {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .headerArea {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .headerArea select {
+    width: 100%;
+  }
+  .headerArea input {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 550px) {
+  .userItems {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .createFormContainer {
+    width: 90%;
+    padding: 30px;
+  }
+}
