@@ -3,6 +3,9 @@
 *::after {
   box-sizing: border-box;
 }
+.App {
+  position: relative;
+}
 .UserPage {
   width: 95%;
   margin: 0 auto;
@@ -37,7 +40,6 @@
   padding: 30px;
   border-radius: 10px;
   border: 1px solid #00000010;
-  position: relative;
 }
 .userItem h2 {
   font-family: "Jost", sans-serif;

@@ -15,8 +15,9 @@ function Users() {
   const [filterFormat, setfilterFormat] = useState({});
   const [sorted, setsortedData] = useState({ sorted: "id", reverse: false });
   const [searchPhrase, setSearchPhrase] = useState("");
-  useEffect(() => {
-    fetch("http://localhost:3001/user")
+
+  const Reolader = async () => {
+    await fetch("http://localhost:3001/user")
       .then((res) => {
         if (!res.ok) {
           throw Error("Your Api Connection Faild");
@@ -32,7 +33,12 @@ function Users() {
         setError(err);
         setisLoading(true);
       });
+  };
+
+  useEffect(() => {
+    Reolader();
   }, []);
+
   const filterUsers = () => {
     const userCopy = [...data];
     userCopy.sort((a, b) => {
@@ -158,15 +164,12 @@ function Users() {
             })}
       </div>
       {isLoading && <h2>Loading...</h2>}
-      {isShow && (
-        <UserForm setData={setData} data={data} setisShow={setisShow} />
-      )}
+      {isShow && <UserForm Reolader={Reolader} setisShow={setisShow} />}
       <div>
         {editFormShow && (
           <EditUser
             addId={addId}
-            setData={setData}
-            data={data}
+            Reolader={Reolader}
             seteditFormShow={seteditFormShow}
           />
         )}

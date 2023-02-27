@@ -12,23 +12,17 @@ function EditUser(props) {
   const [edit, setEdit] = useState("");
   const [editError, seteditError] = useState("");
   const { username, email } = user;
-
-  // const {singleData, singleDataErr} = props
-  // const fillUserName = singleData.map((data) => data.username)
-  // const fillemail = singleData.map((data) => data.email)
   const editFormSubmit = async (e) => {
     e.preventDefault();
     await axios
       .patch(`http://localhost:3001/user/${id}`, user)
       .then((res) => {
         setEdit(res.data.message);
+        props.Reolader();
       })
       .catch((err) => {
         seteditError(err.response.data.message);
       });
-    setTimeout(() => {
-      window.location.reload(false);
-    }, 1000);
   };
 
   useEffect(() => {

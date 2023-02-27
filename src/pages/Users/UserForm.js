@@ -7,7 +7,7 @@ function UserForm(props) {
     username: "",
     email: "",
   });
-  const [data, setData] = useState("");
+  const [createdata, setcreateData] = useState("");
   const [error, setError] = useState("");
   const { username, email } = user;
 
@@ -16,10 +16,8 @@ function UserForm(props) {
     await axios
       .post("http://localhost:3001/user", user)
       .then((res) => {
-        setData(res.data.message);
-        props.setData((prevdata) => {
-          return [...prevdata, user];
-        });
+        setcreateData(res.data.message);
+        props.Reolader();
       })
       .catch((err) => setError(err.response.data.message));
 
@@ -37,8 +35,12 @@ function UserForm(props) {
     <div className={Style.createForm}>
       <div className={Style.createFormContainer}>
         <RiCloseCircleLine onClick={closeForm} />
-        <p style={{ backgroundColor: data ? "#300048" : error ? "red" : null }}>
-          {data ? data : error}
+        <p
+          style={{
+            backgroundColor: createdata ? "#300048" : error ? "red" : null,
+          }}
+        >
+          {createdata ? createdata : error}
         </p>
         <h2 className={Style.title}>Create User</h2>
         <form onSubmit={handleSubmit} className={Style.userForm}>
