@@ -15,7 +15,7 @@ function EditUser(props) {
   const editFormSubmit = async (e) => {
     e.preventDefault();
     await axios
-      .patch(`http://localhost:3001/user/${id}`, user)
+      .patch(`https://node-app-0cjt.onrender.com/user/${id}`, user)
       .then((res) => {
         setEdit(res.data.message);
         props.Reolader();
@@ -27,7 +27,7 @@ function EditUser(props) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/user/${id}`)
+      .get(`https://node-app-0cjt.onrender.com/user/${id}`)
       .then((res) => {
         setUser(res.data[0]);
       })

@@ -14,7 +14,7 @@ function UserForm(props) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await axios
-      .post("http://localhost:3001/user", user)
+      .post("https://node-app-0cjt.onrender.com/user", user)
       .then((res) => {
         setcreateData(res.data.message);
         props.Reolader();

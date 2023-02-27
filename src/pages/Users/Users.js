@@ -17,7 +17,7 @@ function Users() {
   const [searchPhrase, setSearchPhrase] = useState("");
 
   const Reolader = async () => {
-    await fetch("http://localhost:3001/user")
+    await fetch("https://node-app-0cjt.onrender.com/user")
       .then((res) => {
         if (!res.ok) {
           throw Error("Your Api Connection Faild");
@@ -64,10 +64,11 @@ function Users() {
     setAddId(id);
     seteditFormShow(!editFormShow);
   };
+  
 
   const deleteUser = async (id) => {
     await axios
-      .delete(`http://localhost:3001/user/${id}`)
+      .delete(`https://node-app-0cjt.onrender.com/user/${id}`)
       .then((res) => {
         setdeleteMessage(res.data.message);
       })
